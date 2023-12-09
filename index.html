@@ -42,7 +42,6 @@
             text-align: center;
         }
 
-        /* Optional styles for better appearance */
         #result {
             font-size: 18px;
             font-weight: bold;
@@ -64,7 +63,6 @@
             background-color: #0056b3;
         }
 
-        /* 각 항목의 기본적인 스타일 */
         .accordion,
         .accordion_1 {
             background-color: #f5f5f5;
@@ -79,14 +77,12 @@
             transition: 0.4s;
         }
 
-        /* 활성화된 항목의 스타일 */
         .active,
         .accordion:hover,
         .accordion_1:hover {
             background-color: #ddd;
         }
 
-        /* 펼쳐진 내용의 스타일 */
         .panel {
             padding: 0 18px;
             display: none;
@@ -94,7 +90,6 @@
             background-color: #f5d9d5;
         }
 
-        /* 펼쳐진 상태일 때 패널 보이기 */
         .panel.active {
             display: block;
         }
@@ -113,13 +108,11 @@
 
         .hover-zoom {
             transition: font-size 0.3s ease-in-out;
-            /* 크기 변경 애니메이션 속성 */
         }
 
         .hover-zoom:hover {
             font-size: 150%;
             color: blue;
-            /* 호버 시 변경할 크기 */
         }
 
         .comments-container {
@@ -225,10 +218,10 @@
                                     data: values,
                                     borderColor: 'rgb(75, 192, 192)',
                                     tension: 0.1,
-                                    pointBackgroundColor: 'rgba(75, 192, 192, 0.5)', // 점의 초기 배경색
-                                    pointRadius: 5, // 점의 크기
-                                    pointHoverRadius: 7, // 마우스 호버 시 점의 크기
-                                    borderWidth: 2 // 점의 테두리 두께
+                                    pointBackgroundColor: 'rgba(75, 192, 192, 0.5)',
+                                    pointRadius: 5, 
+                                    pointHoverRadius: 7, 
+                                    borderWidth: 2
                                 }]
                             },
                             options: {
@@ -277,16 +270,16 @@
                     if (num == 'no data') {
                         var resultElement = document.getElementById('result');
                         resultElement.innerText = '죄송합니다. ' + year + '년 ' + month + '월의 코로나 확진자 수의 데이터가 없습니다. \n' + '(2020년 4월 ~ 2023년 8월의 데이터를 검색해주세요.)';
-                        resultElement.style.fontSize = '23px'; // 크기를 18px로 설정
-                        resultElement.style.textAlign = 'center'; // 가운데 정렬
-                        resultElement.style.fontWeight = 'bold'; // 굵게 설정
+                        resultElement.style.fontSize = '23px'; 
+                        resultElement.style.textAlign = 'center'; 
+                        resultElement.style.fontWeight = 'bold'; 
                     }
                     else {
                         var resultElement = document.getElementById('result');
                         resultElement.innerHTML = year + '년 ' + month + '월 코로나 확진자 수: <span style="color: red">' + num + '명</span>';
-                        resultElement.style.fontSize = '23px'; // 크기를 18px로 설정
-                        resultElement.style.textAlign = 'center'; // 가운데 정렬
-                        resultElement.style.fontWeight = 'bold'; // 굵게 설정
+                        resultElement.style.fontSize = '23px'; 
+                        resultElement.style.textAlign = 'center'; 
+                        resultElement.style.fontWeight = 'bold'; 
                     }
                 }
 
@@ -526,7 +519,7 @@
                 }
 
                 function deleteComment(index) {
-                    comments.splice(index, 1); // 배열에서 선택된 댓글 삭제
+                    comments.splice(index, 1); 
                     saveCommentsToLocalStorage();
                     displayComments();
                 }
